@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/08 14:20:29 by sumseo            #+#    #+#             */
+/*   Updated: 2023/11/08 14:23:27 by sumseo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include <string.h>
 #include <stdio.h>
 
-
-char *ft_memset(char *phrase, char str, size_t size)
+char	*ft_memset(char *phrase, char str, size_t size)
 {
-    int i = 0;
-    while((size_t)i < size)
-    {
-        phrase[i] = str;
-        i++;
-    }
-    return phrase;
+	int	i;
+
+	i = 0;
+	while ((size_t) i < size)
+	{
+		phrase[i] = str;
+		i++;
+	}
+	return (phrase);
 }
 
 int main()

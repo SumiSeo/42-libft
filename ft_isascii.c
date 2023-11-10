@@ -6,7 +6,7 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:24:00 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/08 14:40:19 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/10 09:58:28 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_isascii(int c)
 
 int main()
 {
-    char test = '3';
+    char test = '+';
     printf("original function -> %d\n", isascii(test));
     printf("my function -> %d\n", ft_isascii(test));
 }

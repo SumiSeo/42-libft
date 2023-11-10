@@ -6,7 +6,7 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:20:29 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/10 10:56:01 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/10 11:20:06 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -17,7 +17,7 @@ void	*ft_memset(void *pointer, int value, size_t count)
 	size_t	i;
 	char	*casted_pointer;
 
-	casted_pointer = (char*) pointer;
+	casted_pointer = (char *) pointer;
 	i = 0;
 	while (i < count)
 	{

@@ -6,15 +6,15 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:18:49 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/08 14:19:52 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/10 10:03:19 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <ctype.h>
 
-int	ft_isprint(int arg)
+int	ft_isprint(int character)
 {
-	if (arg >= 32 && arg <= 127)
+	if (character >= 32 && character <= 127)
 		return (16384);
 	else
 		return (0);
@@ -22,7 +22,7 @@ int	ft_isprint(int arg)
 
 int main()
 {
-    char word = '(';
+    char word = ' ';
     printf("orignal function ->%d\n", isprint(word));
     printf("my function -> %d\n", ft_isprint(word));
 }

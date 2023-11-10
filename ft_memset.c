@@ -6,23 +6,26 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:20:29 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/08 14:23:27 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/10 10:56:01 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 #include <stdio.h>
 
-char	*ft_memset(char *phrase, char str, size_t size)
+void	*ft_memset(void *pointer, int value, size_t count)
 {
-	int	i;
+	size_t	i;
+	char	*casted_pointer;
 
+	casted_pointer = (char*) pointer;
 	i = 0;
-	while ((size_t) i < size)
+	while (i < count)
 	{
-		phrase[i] = str;
+		*casted_pointer = value;
+		casted_pointer++;
 		i++;
 	}
-	return (phrase);
+	return (casted_pointer);
 }
 
 int main()
@@ -34,6 +37,6 @@ int main()
     printf("original function -> %s\n", str);
     printf("original function returning ->%p\n", memset(str, '@', 5));
     printf("my function -> %s\n",str2);
-    printf("myfunction returning ->%p\n", ft_memset(str2, '@', 5));
+	printf("myfunction returning ->%p\n", ft_memset(str2, '@', 5));
 }
 

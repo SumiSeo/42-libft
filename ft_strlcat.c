@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 14:16:04 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/10 09:35:08 by sumseo           ###   ########.fr       */
+/*   Created: 2023/11/08 16:12:08 by sumseo            #+#    #+#             */
+/*   Updated: 2023/11/08 16:14:00 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <ctype.h>
 
-int	ft_isalpha(int character)
+#include <stdio.h>
+
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	if ((character >= 'a' && character <= 'z') || (character >= 'A' && character <= 'Z'))
-		return (1024);
-	else
-		return (0);
+	
+
 }
 
-int main(){
-    int num = '3';
-    printf("original funcion ->%d\n:",isalpha(num));
-    printf("my function -> %d\n", ft_isalpha(num));
+
+int	main()
+{
+	char	source[] = "I am function";
+	char	destination[] = "and you?";
+	size_ti	size = 4;
+	ft_strlcat(destination, source, size);
+
 }

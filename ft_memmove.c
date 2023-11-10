@@ -6,24 +6,28 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:40:24 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/08 14:10:47 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/10 13:15:20 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-char	*ft_memmove(char *dest, char *src, size_t size)
+void	*ft_memmove(void *destination, const void *source, size_t size)
 {
-	int	i;
+	size_t	i;
+	char	*casted_destination;
+	char	*casted_source;
 
+	casted_source = (char *) source;
+	casted_destination = (char *) destination;
 	i = 0;
-	while (i < (int) size)
+	while (i < size)
 	{
-		dest[i] = src[i];
+		casted_destination[i] = casted_source[i];
 		i++;
 	}
-	return (dest);
+	return (destination);
 }
 
 int	main()

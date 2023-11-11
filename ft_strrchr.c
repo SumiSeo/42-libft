@@ -6,7 +6,7 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:50:31 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/10 19:22:34 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/11 16:08:48 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,21 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	length;
-	length = 0;
-	while(s[length])
-		length++;
+	char	*i;
 
-	printf("found %d\n", length);	
-	while(s[length]>0)
+	while (*s)
 	{
-		if(s[length] == c)
-			printf("found %d\n", s[length]);	
-		length--;
+		if (*s == c)
+			i = (char *)s;
+		s++;
 	}
-	return ((char *)s);
+	return ((char *) i);
 }
 
 int	main()
 {
-	char str[] = "Hello world";
-	char c = 'o';
+	char str[] = "sumi seo";
+	char c = 's';
 
 	printf("Returned value -> %s\n", strrchr(str,c));
 	printf("Returned value -> %s\n", ft_strrchr(str,c));

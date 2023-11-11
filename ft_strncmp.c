@@ -6,7 +6,7 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 16:10:49 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/11 16:36:04 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/11 17:46:03 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	while (*s1 && *s2 && i < n)
 	{
-		if(*s1 == *s2)
+		if (*s1 == *s2)
 			value = 0;
-		else if(*s1 > *s2)
+		else if (*s1 > *s20)
 			value = *s1 - *s2; 
 		else
 			value = *s1 - *s2;

@@ -25,7 +25,7 @@ void	*ft_memset(void *s, int c, size_t n)
 		casted_s++;
 		i++;
 	}
-	return (casted_pointer);
+	return (casted_s);
 }
 
 int main()

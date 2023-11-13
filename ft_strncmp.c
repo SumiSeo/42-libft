@@ -24,7 +24,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (*s1 == *s2)
 			value = 0;
-		else if (*s1 > *s20)
+		else if (*s1 > *s2)
 			value = *s1 - *s2; 
 		else
 			value = *s1 - *s2;

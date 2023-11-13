@@ -12,9 +12,9 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int	ft_isalpha(int character)
+int	ft_isalpha(int c)
 {
-	if ((character >= 'a' && character <= 'z') || (character >= 'A' && character <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1024);
 	else
 		return (0);

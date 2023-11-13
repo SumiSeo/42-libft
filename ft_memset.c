@@ -12,17 +12,17 @@
 #include <string.h>
 #include <stdio.h>
 
-void	*ft_memset(void *pointer, int value, size_t count)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
-	char	*casted_pointer;
+	char	*casted_s;
 
-	casted_pointer = (char *) pointer;
+	casted_s = (char *) s;
 	i = 0;
-	while (i < count)
+	while (i < n)
 	{
-		*casted_pointer = value;
-		casted_pointer++;
+		*casted_s = c;
+		casted_s++;
 		i++;
 	}
 	return (casted_pointer);

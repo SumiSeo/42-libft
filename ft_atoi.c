@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int	ft_atoi(const char*nbtr)
+int	ft_atoi(const char *nbtr)
 {
 	int		i;
 	long	nb;

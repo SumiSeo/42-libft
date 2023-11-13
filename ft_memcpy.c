@@ -12,22 +12,22 @@
 #include <string.h>
 #include <stdio.h>
 
-void	*ft_memcpy(void *destination, const void *source, size_t size)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 {
 	size_t	i;
-	char	*casted_destination;
-	char	*casted_source;
+	char	*casted_dest;
+	char	*casted_src;
 
-	casted_source = (char *) source;
-	casted_destination = (char *)destination;
+	casted_src = (char *) src;
+	casted_dest = (char *)dest;
 	i = 0;
-	while (i < size)
+	while (i < n)
 	{
-		casted_destination[i] = casted_source[i];
+		casted_dest[i] = casted_src[i];
 		i++;
 	}
-	return (casted_destination);
+	return (casted_dest);
 }
 
 int main()

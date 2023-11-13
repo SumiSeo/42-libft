@@ -12,11 +12,11 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int	ft_isalnum(int character)
+int	ft_isalnum(int c)
 {
-	if ((character >= 'a' && character <= 'z')
-		|| (character >= 'A' && character <= 'Z')
-		|| (character >= '0' && character <= '9'))
+	if ((c >= 'a' && c <= 'z')
+		|| (c >= 'A' && c <= 'Z')
+		|| (c >= '0' && c <= '9'))
 		return (8);
 	else
 		return (0);

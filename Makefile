@@ -5,23 +5,19 @@ SOURCE = $(wildcard *.c)
 OBJ = $(SOURCE:.c=.o)
 
 all : $(NAME) 
-	@echo $(SOURCE)
-	@echo "Hello world"
 
 hello : $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
 
-_%.o : %.c
-	@echo $@
+%.o : %.c
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 clean :
 	rm -rf *.o
 
-fclean :
+fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all 
 
 
-OBJECTS = %.c

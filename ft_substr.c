@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/16 09:51:50 by sumseo            #+#    #+#             */
+/*   Updated: 2023/11/16 09:54:54 by sumseo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -8,10 +20,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	total;
 
 	i = 0;
-	total = (size_t) + len;
+	total = len;
 	if (len < 1)
-			return (NULL);
-	casted_s = (char *) malloc(total * sizeof(char)); 
+		return (NULL);
+	casted_s = (char *) malloc(total * sizeof(char));
 	while (i < total)
 	{
 		casted_s[i] = s[start + i];
@@ -19,8 +31,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (casted_s);
 }
-
-
 
 int	main()
 {

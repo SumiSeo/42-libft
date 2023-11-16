@@ -11,10 +11,11 @@
 /* ************************************************************************** */
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
-	int	length;
+	size_t	length;
 
 	length = 0;
 	while (*s != 0)
@@ -25,10 +26,10 @@ size_t	ft_strlen(const char *s)
 	return (length);
 }
 
-int main()
+/*int main()
 {
     char str[] = "Sumi";
     printf("original fun => %ld\n",strlen(str));
     printf("my func => %ld\n", ft_strlen(str));
 
-}
+}*/

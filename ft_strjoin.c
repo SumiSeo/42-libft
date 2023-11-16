@@ -6,7 +6,7 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 09:55:21 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/16 09:58:29 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/16 10:00:09 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	length;
-	char *str;
-	size_t i;
-	size_t j;
+	char	*str;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
 	length = 0;
-	if (! (*s1&& *s2))
-		return NULL;
-	while(s1[i] || s2[j])
+	if (! (*s1 && *s2))
+		return (NULL);
+	while (s1[i] || s2[j])
 	{
-		if(s1[i])
+		if (s1[i])
 		{	
 			length++;
 			i++;
@@ -42,9 +42,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str = (char *)malloc(length * sizeof(char));
 	i = 0;
 	j = 0;
-	while(*s1 || *s2)
+	while (*s1 || *s2)
 	{
-		if(*s1)
+		if (*s1)
 		{
 			str[i] = *s1;
 			s1++;

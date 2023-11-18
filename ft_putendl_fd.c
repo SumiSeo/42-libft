@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 13:54:03 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/18 14:07:01 by sumseo           ###   ########.fr       */
+/*   Created: 2023/11/18 14:23:14 by sumseo            #+#    #+#             */
+/*   Updated: 2023/11/18 14:41:01 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 #include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
-/*
+
 int	main()
 {
-
-	char c = 'a';
-	ft_putchar_fd(c,1);
+	char *s = "Sumi is working on saturday";
+	ft_putendl_fd(s,1);
 }
-*/

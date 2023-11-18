@@ -23,9 +23,11 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+/*
 int	main()
 {
 	char *s = "Sumi is tesiting";
 	ft_putstr_fd(s, 1);
 
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 11:20:56 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/18 12:55:14 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/18 12:59:52 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ char	*ft_itoa(int n)
 	n_long = n;
 	count = count_length(n);
 	dest = (char *) malloc (sizeof (char) * (count + 1));
+	if (!dest)
+		return (NULL);
 	if (n_long < 0)
 	{
 		dest[0] = '-';

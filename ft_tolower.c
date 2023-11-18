@@ -21,9 +21,11 @@ int	ft_tolower(int c)
 		return (c);
 }
 
+/*
 int	main()
 {
 	char	alpha = 'Z';
 	printf("%c\n",tolower(alpha));
 	printf("%c\n",ft_tolower(alpha));
 }
+*/

@@ -29,7 +29,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 int	main()
 {
 
@@ -42,3 +42,4 @@ int	main()
 	printf("after destination : %s\n",destination);
 	ft_memmove(destination, words, size);
 }
+*/

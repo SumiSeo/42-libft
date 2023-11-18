@@ -30,6 +30,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (casted_dest);
 }
 
+/*
 int main()
 {
     char src[] = "Sumi is writing code here";
@@ -39,3 +40,4 @@ int main()
     printf("my function destination -> %p\n",ft_memcpy(dest,src,size));
     
 }
+*/

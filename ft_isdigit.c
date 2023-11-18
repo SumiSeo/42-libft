@@ -19,6 +19,7 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
+/*
 int main(){
     char test ='A';
 
@@ -26,3 +27,4 @@ int main(){
     printf("my function -> %d\n", ft_isdigit(test));
         
 }
+*/

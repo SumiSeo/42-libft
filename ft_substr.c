@@ -31,7 +31,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (casted_s);
 }
-
+/*
 int	main()
 {
 	char *nouvelle = "Cettechaine de caracterere";
@@ -44,3 +44,4 @@ int	main()
 	printf("my function test ->%p\n", ft_substr(nouvelle, index, length));
 
 }
+*/

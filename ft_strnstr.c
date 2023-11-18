@@ -34,6 +34,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
+/*
 int	main()
 {
 	  char *largestring = "Hello world";
@@ -42,3 +43,4 @@ int	main()
 	  printf("returned value -> %s\n", ft_strnstr(largestring, smallstring, size));
 
 }
+*/

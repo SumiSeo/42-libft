@@ -20,10 +20,11 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
+/*
 int main()
 {
     char test = '+';
     printf("original function -> %d\n", isascii(test));
     printf("my function -> %d\n", ft_isascii(test));
 }
+*/

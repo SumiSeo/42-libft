@@ -61,7 +61,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-
+/*
 int	main()
 {
 	char	*s1 = "42";
@@ -69,4 +69,4 @@ int	main()
 
 	printf("my function -> %s\n", ft_strjoin(s1,s2));
 
-}
+}*/

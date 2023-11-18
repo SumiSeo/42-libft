@@ -35,6 +35,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return ((char *) casted_string);
 }
 
+/*
 int	main()
 {
 	char *a = "Hello world how are you ?";
@@ -47,3 +48,4 @@ int	main()
 	char *ptr = ft_memchr(a, word, size);
 	printf("answer -> %s\n",ptr);
 }
+*/

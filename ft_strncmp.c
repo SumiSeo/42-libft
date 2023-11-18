@@ -15,35 +15,28 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	value;
+	// int	value;
 	size_t	i;
 
-	value = 0;
+	// value = 0;
 	i = 0;
-	while (*s1 && *s2 && i < n)
+	while (s1[i]&& s2[i] && i < n)
 	{
-		if (*s1 == *s2)
-			value = 0;
-		else if (*s1 > *s2)
-			value = *s1 - *s2; 
-		else
-			value = *s1 - *s2;
-		s1++;
-		s2++;
+		if (s1[i] != s2[i])
+			return (s1[i]- s2[i]);
 		i++;
-		
 	}
-	return (value);
+	return (0);
 
 }
-
+/*
 int	main()
 {
-	char *s1 = "Sumi is programming";
-	char *s2 = "Si is at 42";
+	char *s1 = "Tripouille";
+	char *s2 = "tripouille";
 	size_t n = 7;
 
 	printf("What is the answer -> %d\n", strncmp(s1, s2, n));
 	printf("What is the answer -> %d\n", ft_strncmp(s1, s2, n));
 
-}
+}*/

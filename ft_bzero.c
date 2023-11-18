@@ -27,6 +27,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
+/*
 int main()
 {
     char str[] = "TESTis for Testing"; 
@@ -39,3 +40,4 @@ int main()
     printf("my function -> %s <-\n", str2);
 
 }
+*/

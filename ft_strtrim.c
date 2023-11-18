@@ -53,6 +53,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	casted_s1[i] = '\0';
 	return (casted_s1);
 }
+
+/*
 int	main()
 {
 	char *str = "aaaajjjjjjaajkacbaj";
@@ -62,5 +64,6 @@ int	main()
 
 }
 
+*/
 
 

@@ -32,6 +32,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (length);
 }
 
+/*
 int	main()
 {
 	char	source[] = "Hello there, Venus";
@@ -40,3 +41,4 @@ int	main()
 
 	ft_strlcpy(dest,source,size);
 }
+*/

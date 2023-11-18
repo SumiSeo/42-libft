@@ -20,8 +20,10 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
+/*
 int main(){
     int num = '3';
     printf("original funcion ->%d\n:",isalpha(num));
     printf("my function -> %d\n", ft_isalpha(num));
 }
+*/

@@ -28,6 +28,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (casted_s);
 }
 
+/*
 int main()
 {
     char str[] = "TEST is for Testing"; 
@@ -40,3 +41,4 @@ int main()
 	printf("myfunction returning ->%p\n", ft_memset(str2, '@', 5));
 }
 
+*/

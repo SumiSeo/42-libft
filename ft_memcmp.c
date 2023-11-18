@@ -39,6 +39,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (value);
 }
 
+/*
 int	main()
 {
     char *s1 = "Simi is programming";
@@ -50,3 +51,4 @@ int	main()
 
 
 }
+*/

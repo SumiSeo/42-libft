@@ -43,7 +43,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 }
 
-
+/*
 int	main()
 {
 	char	destination[] = "This is ";
@@ -51,3 +51,4 @@ int	main()
 	size_t	size = 0;
 	printf("Returned value %ld\n", ft_strlcat(destination, source, size));
 }
+*/

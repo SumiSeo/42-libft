@@ -36,11 +36,11 @@ int	ft_atoi(const char *nbtr)
 	}
 	return (sign * nb);
 }
-
+/*
 int	main()
 {
 	char	*str = "590310";
 	printf("original function ->%d\n",atoi(str));
 	printf("my function ->%d\n",ft_atoi(str));
 
-}
+}*/

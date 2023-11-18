@@ -33,6 +33,7 @@ char	*ft_strdup(const char *s1)
 	return (casted_str);
 }
 
+/*
 int	main()
 {
 	char *str = "";
@@ -42,3 +43,4 @@ int	main()
 	printf("my function %s\n", ft_strdup(str));
 	printf("my function %p\n", ft_strdup(str));
 }
+*/

@@ -26,6 +26,7 @@ char	*ft_strrchr(const char *s, int c)
 	return ((char *) i);
 }
 
+/*
 int	main()
 {
 	char str[] = "sumi seo";
@@ -35,3 +36,4 @@ int	main()
 	printf("Returned value -> %s\n", ft_strrchr(str,c));
 	
 }
+*/

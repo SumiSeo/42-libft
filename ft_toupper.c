@@ -21,9 +21,11 @@ int	ft_toupper(int c)
 		return (c);
 }
 
+/*
 int	main()
 {
 	char	alpha = 'b';
 	printf("%c\n",toupper(alpha));
 	printf("%c\n",ft_toupper(alpha));
 }
+*/

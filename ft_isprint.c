@@ -19,10 +19,11 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
+/*
 int main()
 {
     char word = ' ';
     printf("orignal function ->%d\n", isprint(word));
     printf("my function -> %d\n", ft_isprint(word));
 }
+*/

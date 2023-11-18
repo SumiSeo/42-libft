@@ -22,9 +22,11 @@ int	ft_isalnum(int c)
 		return (0);
 }
 
+/*
 int main()
 {
     char test = '0';
     printf("original function -> %d\n",isalnum(test));
     printf("my function -> %d\n",ft_isalnum(test));
 }
+*/

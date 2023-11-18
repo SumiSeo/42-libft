@@ -23,6 +23,7 @@ char	*ft_strchr(const char *s, int c)
 	return ((char *) s);
 }
 
+/*
 int	main()
 {
 	char str[] = "hello world";
@@ -31,3 +32,4 @@ int	main()
 	printf("returned character -> %s\n", ft_strchr(str,character));
 
 }
+*/

@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	i = 0;
@@ -60,8 +60,6 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-
-	printf("count %d\n",count);
 	array[count][0] = '\0';
 
 	j = 0;
@@ -76,13 +74,6 @@ char	**ft_split(char const *s, char c)
 			l = 0;
 		k++;
 	}
-	
-	
-	printf("->%s<-\n",array[0]);
-	printf("->%s<-\n",array[1]);
-	printf("->%s<-\n",array[2]);
-	printf("->%s<-\n",array[3]);
-	printf("->%s<-\n",array[4]);
 	return array;
 }	
 

@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 	long	nb;
 
 	nb = n;
-	if (nbi < 0)
+	if (nb < 0)
 	{
 		ft_putchar_fd('-', fd);
 		nb *= -1;
@@ -32,10 +32,10 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(n % 10 + '0', fd);
 	}
 }
-
+/*
 int	main()
 {
 	int	a = 42;
 	ft_putnbr_fd(a, 1);
-}
+}*/
 

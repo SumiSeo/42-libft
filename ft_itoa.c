@@ -59,9 +59,10 @@ char	*ft_itoa(int n)
 	}
 	return (dest);
 }
-
+/*
 int	main()
 {
 	int	number = -3;
 	printf("returned value %s\n", ft_itoa(number));
 }
+*/

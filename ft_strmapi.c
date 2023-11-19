@@ -40,7 +40,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (new_s);
 }
 
-
+/*
 static char sumi(unsigned int i, char s)
 {
 	printf("int %d\n",i);
@@ -54,3 +54,4 @@ int	main()
 	printf("final result : %s\n", ft_strmapi(s,sumi));
 
 }
+*/

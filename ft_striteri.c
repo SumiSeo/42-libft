@@ -22,14 +22,18 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
+
+/*
 static void sumi(unsigned int i, char *s)
 {
 	printf("integer %d\n",i);
 	printf("string %s\n", s);
 }
+
 int	main()
 {
 	char *str = "Sumi is writing code";
 	ft_striteri(str,sumi);
 
 }
+*/

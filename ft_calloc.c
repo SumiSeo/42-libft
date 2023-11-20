@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -35,17 +35,14 @@ void	*ft_calloc(size_t count, size_t size)
 }
 /*
 
-int	main()
+int	main(void)
 {
-	
-	size_t num; 
+	size_t	num;
+	size_t	byte;
+
 	num = 4;
-	size_t byte;
 	byte = 0;
 	printf("what is returned from original calloc %p\n", calloc(num,byte));
 	printf("what is returned from my calloc %p\n", ft_calloc(num, byte));
-
-
-
 }
 */

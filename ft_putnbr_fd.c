@@ -28,13 +28,15 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(nb + '0', fd);
 	else
 	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + '0', fd);
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putchar_fd(nb % 10 + '0', fd);
 	}
 }
-/*
-int	main(void)
-{
-	int	a = 42;
-	ft_putnbr_fd(a, 1);
-}*/
+
+// int	main(void)
+// {
+// 	int	a;
+
+// 	a = 42;
+// 	ft_putnbr_fd(a, 1);
+// }

@@ -10,14 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-static int	count_length(int n)
+static int	count_length(long n)
 {
 	int	total;
 
 	total = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
 		n *= -1;
@@ -38,13 +39,14 @@ char	*ft_itoa(int n)
 	char	*dest;
 	int		i;
 
-	count = 0;
 	i = 0;
 	n_long = n;
 	count = count_length(n);
-	dest = (char *) malloc (sizeof (char) * (count + 1));
+	dest = ft_calloc(count + 1, sizeof(*dest));
 	if (!dest)
 		return (NULL);
+	if (n == 0)
+		dest[0] = '0';
 	if (n_long < 0)
 	{
 		dest[0] = '-';
@@ -53,16 +55,16 @@ char	*ft_itoa(int n)
 	}
 	while (count > i)
 	{
-		count--;
-		dest[count] = (n_long % 10) + '0';
+		dest[--count] = (n_long % 10) + '0';
 		n_long /= 10;
 	}
 	return (dest);
 }
-/*
-int	main()
-{
-	int	number = -3;
-	printf("returned value %s\n", ft_itoa(number));
-}
-*/
+
+// int	main(void)
+// {
+// 	int	number;
+
+// 	number = 444444;
+// 	printf("returned value %s\n", ft_itoa(number));
+// }

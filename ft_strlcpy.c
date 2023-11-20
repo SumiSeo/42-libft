@@ -9,19 +9,19 @@
 /*   Updated: 2023/11/19 20:47:49 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	length;
 
-	i= 0;
+	i = 0;
 	length = 0;
 	if (size > 0)
 	{
-		while(src[i] && i < size - 1)
+		while (src[i] && i < size - 1)
 		{
 			dst[i] = src[i];
 			i++;
@@ -29,17 +29,18 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = '\0';
 	}
 	while (src[length])
-			length++;
-	return length;
+		length++;
+	return (length);
 }
 
 /*
-int	main()
+int	main(void)
 {
 	char	source[] = "Hello there, Venus";
 	char	dest[100];
-	size_t	size = 0;
+	size_t	size;
 
+	size = 0;
 	ft_strlcpy(dest,source,size);
 }
 */

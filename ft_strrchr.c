@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -25,15 +25,15 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)(s + length));
 	while (length > 0)
 	{
-		if (s[length - 1] == (char) c)
+		if (s[length - 1] == (char)c)
 			return ((char *)(s + length - 1));
-		length --;
+		length--;
 	}
 	return (NULL);
 }
 
 /*
-int	main()
+int	main(void)
 {
 	char str[] = "sumi seo";
 	char c = 0;

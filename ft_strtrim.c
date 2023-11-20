@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 static int	ft_get_index(char const *set, char c)
 {
@@ -45,7 +45,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (end > start && ft_get_index(set, s1[end - 1]))
 		end--;
-	casted_s1 = (char *) malloc(sizeof(char) * (end - start +1));
+	casted_s1 = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!casted_s1)
 		return (NULL);
 	while (start < end)
@@ -55,15 +55,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 
 /*
-int	main()
+int	main(void)
 {
-	char *str = "aaaajjjjjjaajkacbaj";
-	char *set = "aj";
+	char	*str;
+	char	*set;
 
+	str = "aaaajjjjjjaajkacbaj";
+	set = "aj";
 	printf("Return value :%s\n", ft_strtrim(str,set));
-
 }
 
 */
-
-

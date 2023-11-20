@@ -10,15 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
 #include <stdio.h>
+#include <strings.h>
 
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 	char	*casted_pointer;
 
-	casted_pointer = (char *) s;
+	casted_pointer = (char *)s;
 	i = 0;
 	while (i < n)
 	{
@@ -26,20 +26,19 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 		casted_pointer++;
 	}
-	
 }
 
 /*
-int main()
+int	main(void)
 {
-    char str[] = "TESTis for Testing"; 
-    printf("original function -> %s <-\n", str);
-    bzero(str, 1);
-    printf("original function -> %s <-\n", str);
-    char str2[] = " I am testing this one";
-    printf("my function-> %s <-\n",str2);
-    ft_bzero(str2, 1);
-    printf("my function -> %s <-\n", str2);
+	char	str[] = "TESTis for Testing";
+	char	str2[] = " I am testing this one";
 
+	printf("original function -> %s <-\n", str);
+	bzero(str, 1);
+	printf("original function -> %s <-\n", str);
+	printf("my function-> %s <-\n",str2);
+	ft_bzero(str2, 1);
+	printf("my function -> %s <-\n", str2);
 }
 */

@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -40,12 +40,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 }
 
 /*
-int	main()
+int	main(void)
 {
-	  char *largestring = "Hello world";
-      char *smallstring = "lo";
-      size_t size = 10;
-	  printf("returned value -> %s\n", ft_strnstr(largestring, smallstring, size));
+	char	*largestring;
+	char	*smallstring;
+	size_t	size;
 
+		largestring = "Hello world";
+		smallstring = "lo";
+		size = 10;
+		printf("returned value -> %s\n", ft_strnstr(largestring, smallstring,
+				size));
 }
 */

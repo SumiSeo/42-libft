@@ -6,87 +6,81 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 10:46:13 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/18 10:50:05 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/20 16:45:07 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-static int	count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
-	int	i;
-	i = 0;
-	while(*s)
+	int	count;
+
+	count = 0;
+	while (*s)
 	{
-		if(*s == c)
-			i++;
-		s++;
+		while (*s && *s == c)
+			s++;
+		if (*s)
+		{
+			count++;
+			while (*s && *s != c)
+				s++;
+		}
 	}
-	return i;
+	return (count);
+}
+
+static char	**free_array(char **array, int count)
+{
+	while (count >= 0)
+	{
+		free(array[count]);
+		count--;
+	}
+	free(array);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int	count;
 	char	**array;
-	size_t	temp_count;
-	int	i;
-	int j;
-	int k;
+	size_t	i;
+	size_t	j;
+	size_t	k;
+
+	i = 0;
 	k = 0;
-	i = 0 ;
-	count = count_words(s, c);
-	int	each_letters[count];
-	array = (char **)malloc(sizeof(char *) * (count +1));
-	temp_count = 0;
+	array = (char **)ft_calloc(count_words(s, c) + 1, sizeof(char *));
+	if (!array)
+		return (NULL);
 	j = 0;
-	int l;
-
-	while(i < count + 1)
+	while (i < count_words(s, c))
 	{
-		while(s[j] != c && s[j] !='\0')
-		{
-			temp_count++;
-			j++;
-		}
-		array[i] = (char*)malloc(sizeof(char) * temp_count +1);
-		each_letters[i] = temp_count;
-		if(s[j] == c)
-		{
-			temp_count = 0;
-			j++;
-		}
-		i++;
+		while (s[k] == c)
+			k++;
+		j = k;
+		while (s[k] && s[k] != c)
+			k++;
+		array[i] = (char *)ft_calloc((k - j + 1), sizeof(char));
+		if (!array[i])
+			return (free_array(array, i));
+		ft_strlcpy(array[i++], &s[j], k - j + 1);
 	}
-	array[count][0] = '\0';
-
-	j = 0;
-	while(k < each_letters[k])
-	{
-		printf("Each letters %d\n", each_letters[k]);
-		printf("Each letters %s\n", s);
-		l = 0;
-		while(s[j] !=c && s[j] != '\0')
-			array[k][l++] = s[j++];
-		if(s[j++] == c)
-			l = 0;
-		k++;
-	}
-	return array;
-}	
+	return (array);
+}
 
 /*
-
-int	main()
+int	main(void)
 {
-	char *str= "this-is-testing-string";
+	char *str= "----1--2-3-45--6-7-8";
 	char c = '-';
 	char **arr;
 	arr = ft_split(str, c);
 	printf("TEST VALUE : %c\n", arr[0][0]);
-	printf("TEST VALUE : %c\n", arr[0][1]);
-	printf("TEST VALUE : %c\n", arr[0][2]);
-}
-*/
+	printf("TEST VALUE : %c\n", arr[1][0]);
+	printf("TEST VALUE : %c\n", arr[2][0]);
+}*/

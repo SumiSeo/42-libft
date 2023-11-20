@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -19,8 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*casted_dest;
 	char	*casted_src;
 
-	casted_src = (char *) src;
-	casted_dest = (char *) dest;
+	casted_src = (char *)src;
+	casted_dest = (char *)dest;
 	if (dest > src)
 	{
 		while (n > 0)
@@ -42,7 +42,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 }
 
 /*
-int	main()
+int	main(void)
 {
 
 	char str[100] = "Learning is fun";
@@ -55,4 +55,3 @@ int	main()
 	printf("original function %s",memmove(first, second, size));
 	printf("my function %s\n", ft_memmove(first, second, size));
 }*/
-

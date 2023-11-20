@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -36,11 +36,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 /*
 
-int	main()
+int	main(void)
 {
 	char	destination[] = "This is ";
 	char	source[] = "a potentially long string";
-	size_t	size = 25;
+	size_t	size;
+
+	size = 25;
 	printf("Returned value %ld\n", ft_strlcat(destination, source, size));
 }
 */

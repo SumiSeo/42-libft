@@ -9,9 +9,9 @@
 /*   Updated: 2023/11/19 20:12:40 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -23,22 +23,22 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == (char)c)
-			return ((char *)(s+i));
+			return ((char *)(s + i));
 		i++;
 	}
-
-	if(c == 0)
-		return ((char *)(s+i));
+	if (c == 0)
+		return ((char *)(s + i));
 	return (NULL);
 }
 
 /*
-int	main()
+int	main(void)
 {
-	char str[] = "hello world";
-	char character = 'o';
+	char	str[] = "hello world";
+	char	character;
+
+	character = 'o';
 	printf("returned character -> %s\n", strchr(str,character));
 	printf("returned character -> %s\n", ft_strchr(str,character));
-
 }
 */

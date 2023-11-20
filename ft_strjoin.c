@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -24,12 +24,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	j = 0;
 	length = 0;
-	if (! (*s1 && *s2))
+	if (!(*s1 && *s2))
 		return (NULL);
 	while (s1[i] || s2[j])
 	{
 		if (s1[i])
-		{	
+		{
 			length++;
 			i++;
 		}
@@ -51,18 +51,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 			i++;
 		}
 		else if (*s2)
-		{	
-			str[i+j] = *s2;
+		{
+			str[i + j] = *s2;
 			s2++;
 			j++;
-
 		}
 	}
 	return (str);
 }
 
 /*
-int	main()
+int	main(void)
 {
 	char	*s1 = "42";
 	char	*s2 = "ecole";

@@ -6,34 +6,38 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:50:31 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/11 16:08:48 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/20 11:41:47 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*i;
+	int	length;
 
-	while (*s)
+	if (!s)
+		return (NULL);
+	length = ft_strlen(s);
+	if (c == 0)
+		return ((char *)(s + length));
+	while (length > 0)
 	{
-		if (*s == c)
-			i = (char *)s;
-		s++;
+		if (s[length - 1] == (char) c)
+			return ((char *)(s + length - 1));
+		length --;
 	}
-	return ((char *) i);
+	return (NULL);
 }
 
 /*
 int	main()
 {
 	char str[] = "sumi seo";
-	char c = 's';
+	char c = 0;
 
 	printf("Returned value -> %s\n", strrchr(str,c));
-	printf("Returned value -> %s\n", ft_strrchr(str,c));
-	
-}
-*/
+	printf("my Returned value -> %s\n", ft_strrchr(str,c));
+}*/

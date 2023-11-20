@@ -6,7 +6,7 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 09:24:18 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/13 10:12:44 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/20 11:20:32 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,17 @@ int	ft_atoi(const char *nbtr)
 	nb = 0;
 	if (!nbtr)
 		return (0);
-	while (nbtr[i] != '\0')
+	while ((nbtr[i] >= 9 && nbtr[i] <= 13) || nbtr[i] == 32)
+		i++;
+	if (nbtr[i] == '-' || nbtr[i] == '+')
 	{
-		if (nbtr[0] == '-')
+		if (nbtr[i] == '-')	
 			sign *= -1;
-		if (nbtr[1] == '-' || nbtr[1] == '+')
-			return (0);
-		if (nbtr[i] >= '0' && nbtr[i] <= '9')
-			nb = (nb * 10) + (nbtr[i] - '0');
 		i++;
 	}
+	if (nbtr[i] >= '0' && nbtr[i] <= '9')
+		nb = (nb * 10) + (nbtr[i] - '0');
+	i++;
 	return (sign * nb);
 }
 /*

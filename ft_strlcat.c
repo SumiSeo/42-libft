@@ -6,49 +6,41 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:12:08 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/10 18:13:48 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/20 10:06:22 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t length_dst;
-	size_t i;
-	size_t length_src;
+	size_t	l_dst;
+	size_t	l_src;
+	size_t	i;
 
 	i = 0;
-	length_dst = 0;
-	length_src = 0;
-
-	while (dst[length_dst] != '\0')
-		length_dst++;
-	while (src[length_src] != '\0')
-		length_src++;
-	
-	if (size == 0)
-		return (length_dst);
-		
-	while (*src && i < size)
+	l_dst = ft_strlen(dst);
+	l_src = ft_strlen(src);
+	while (src[i] && l_dst + i + 1 < size)
 	{
-		if (i == size-1)
-			dst[length_dst+i] = '\0';
-		else 
-			dst[length_dst+i] = src[i];
+		dst[l_dst + i] = src[i];
 		i++;
 	}
-	printf("string %s\n<-", dst);
-	return (length_dst + length_src);
-
+	dst[l_dst + i] = '\0';
+	if (l_dst > size)
+	{
+		return (l_src + size);
+	}
+	return (l_src + l_dst);
 }
-
 /*
+
 int	main()
 {
 	char	destination[] = "This is ";
 	char	source[] = "a potentially long string";
-	size_t	size = 0;
+	size_t	size = 25;
 	printf("Returned value %ld\n", ft_strlcat(destination, source, size));
 }
 */

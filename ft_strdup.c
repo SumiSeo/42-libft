@@ -6,7 +6,7 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 09:49:31 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/20 12:49:12 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/20 12:51:31 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ char	*ft_strdup(const char *s1)
 
 	length = 0;
 	i = 0;
-	if(!s1)
-		return NULL;
-	while(s1[length])
-		length++;
-	casted_str = (char *)malloc(sizeof(char) * length + 1);	
-	if(!casted_str)
+	if (!s1)
 		return (NULL);
-	while(i < length)
+	while (s1[length])
+		length++;
+	casted_str = (char *)malloc(sizeof(char) * length + 1);
+	if (!casted_str)
+		return (NULL);
+	while (i < length)
 	{
 		casted_str[i] = s1[i];
 		i++;

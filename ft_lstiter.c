@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	f(&lst);
 }
-
+/*
 static void	sumi(void *p)
 {
 	printf("deleted %p\n", p);
@@ -31,3 +31,4 @@ int	main(void)
 	l1.next->next = ft_lstnew("korean");
 	ft_lstiter(ft_lstnew("sumi"), sumi);
 }
+*/

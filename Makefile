@@ -17,7 +17,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
-bonus : $(OBJ) %(BONUS_OBJ)
+bonus : $(OBJ) $(BONUS_OBJ)
 	ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
 
 clean :

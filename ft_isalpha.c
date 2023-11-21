@@ -9,8 +9,8 @@
 /*   Updated: 2023/11/10 09:35:08 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <ctype.h>
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -21,9 +21,9 @@ int	ft_isalpha(int c)
 }
 
 /*
-int main(){
-    int num = '3';
-    printf("original funcion ->%d\n:",isalpha(num));
-    printf("my function -> %d\n", ft_isalpha(num));
+int	main(void){
+	int num = '3';
+	printf("original funcion ->%d\n:",isalpha(num));
+	printf("my function -> %d\n", ft_isalpha(num));
 }
 */

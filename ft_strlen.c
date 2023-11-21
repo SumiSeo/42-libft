@@ -9,8 +9,7 @@
 /*   Updated: 2023/11/10 10:15:31 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+
 #include "libft.h"
 
 size_t	ft_strlen(const char *s)
@@ -20,16 +19,16 @@ size_t	ft_strlen(const char *s)
 	length = 0;
 	while (*s != 0)
 	{
-		s ++;
-		length ++;
+		s++;
+		length++;
 	}
 	return (length);
 }
 
 /*int main()
 {
-    char str[] = "Sumi";
-    printf("original fun => %ld\n",strlen(str));
-    printf("my func => %ld\n", ft_strlen(str));
+	char str[] = "Sumi";
+	printf("original fun => %ld\n",strlen(str));
+	printf("my func => %ld\n", ft_strlen(str));
 
 }*/

@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/18 14:41:01 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
@@ -18,7 +18,7 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putchar_fd('\n', fd);
 }
 /*
-int	main()
+int	main(void)
 {
 	char *s = "Sumi is working on saturday";
 	ft_putendl_fd(s,1);

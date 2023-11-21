@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -28,15 +27,16 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 
 /*
-int	main()
+int	main(void)
 {
-    char *s1 = "Simi is programming";
-	char *s2 = "Su is at 42";
-	size_t n = 2;
+	char	*s1;
+	char	*s2;
+	size_t	n;
 
+	s1 = "Simi is programming";
+	s2 = "Su is at 42";
+	n = 2;
 	printf("What is the answer -> %d\n", memcmp(s1, s2, n));
 	printf("What is the answer -> %d\n", ft_memcmp(s1, s2, n));
-
-
 }
 */

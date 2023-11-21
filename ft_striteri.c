@@ -9,7 +9,8 @@
 /*   Updated: 2023/11/18 13:53:11 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
@@ -24,16 +25,17 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 }
 
 /*
-static void sumi(unsigned int i, char *s)
+static void	sumi(unsigned int i, char *s)
 {
 	printf("integer %d\n",i);
 	printf("string %s\n", s);
 }
 
-int	main()
+int	main(void)
 {
-	char *str = "Sumi is writing code";
-	ft_striteri(str,sumi);
+	char	*str;
 
+	str = "Sumi is writing code";
+	ft_striteri(str,sumi);
 }
 */

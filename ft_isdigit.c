@@ -9,8 +9,8 @@
 /*   Updated: 2023/11/10 09:38:13 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <ctype.h>
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
@@ -20,11 +20,11 @@ int	ft_isdigit(int c)
 }
 
 /*
-int main(){
-    char test ='A';
+int	main(void){
+	char test ='A';
 
-    printf("original function -> %d\n", isdigit(test));
-    printf("my function -> %d\n", ft_isdigit(test));
-        
+	printf("original function -> %d\n", isdigit(test));
+	printf("my function -> %d\n", ft_isdigit(test));
+
 }
 */

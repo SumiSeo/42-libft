@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
@@ -22,9 +21,11 @@ int	ft_tolower(int c)
 }
 
 /*
-int	main()
+int	main(void)
 {
-	char	alpha = 'Z';
+	char	alpha;
+
+	alpha = 'Z';
 	printf("%c\n",tolower(alpha));
 	printf("%c\n",ft_tolower(alpha));
 }

@@ -9,8 +9,8 @@
 /*   Updated: 2023/11/19 19:52:48 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <ctype.h>
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -20,10 +20,12 @@ int	ft_isprint(int c)
 		return (0);
 }
 /*
-int main()
+int	main(void)
 {
-    char word = ' ';
-    printf("orignal function ->%d\n", isprint(word));
-    printf("my function -> %d\n", ft_isprint(word));
+	char	word;
+
+	word = ' ';
+	printf("orignal function ->%d\n", isprint(word));
+	printf("my function -> %d\n", ft_isprint(word));
 }
 */

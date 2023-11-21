@@ -9,18 +9,19 @@
 /*   Updated: 2023/11/18 14:07:01 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <unistd.h>
+
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
 /*
-int	main()
+int	main(void)
 {
+	char	c;
 
-	char c = 'a';
+	c = 'a';
 	ft_putchar_fd(c,1);
 }
 */

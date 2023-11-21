@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -23,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	length = 0;
 	while (s[length])
 		length++;
-	new_s = (char *) malloc(sizeof (char) * (length + 1));
+	new_s = (char *)malloc(sizeof(char) * (length + 1));
 	if (!s)
 		return (NULL);
 	if (!new_s)
@@ -41,17 +40,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 
 /*
-static char sumi(unsigned int i, char s)
+static char	sumi(unsigned int i, char s)
 {
 	printf("int %d\n",i);
 	printf("int %c\n",s);
-	return s;
+	return (s);
 }
 
-int	main()
+int	main(void)
 {
-	char *s = "Test string";
-	printf("final result : %s\n", ft_strmapi(s,sumi));
+	char	*s;
 
+	s = "Test string";
+	printf("final result : %s\n", ft_strmapi(s,sumi));
 }
 */

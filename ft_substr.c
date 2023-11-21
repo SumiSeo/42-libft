@@ -10,15 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 static char	*allocate_empty_string(void)
 {
 	char	*casted_s;
 
-	casted_s = (char *)malloc (1 * sizeof(char));
+	casted_s = (char *)malloc(1 * sizeof(char));
 	if (!casted_s)
 		return (NULL);
 	casted_s[0] = '\0';
@@ -27,7 +25,7 @@ static char	*allocate_empty_string(void)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*casted_s ;
+	char	*casted_s;
 	size_t	i;
 	size_t	total;
 	size_t	input_length;
@@ -41,11 +39,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (allocate_empty_string());
 	if (start + len > input_length)
 		total = input_length - start;
-	casted_s = (char *) malloc((total + 1) * sizeof(char));
+	casted_s = (char *)malloc((total + 1) * sizeof(char));
 	if (!casted_s)
 		return (NULL);
 	while (i < total)
-	{	
+	{
 		casted_s[i] = s[start + i];
 		i++;
 	}
@@ -53,16 +51,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (casted_s);
 }
 /*
-int	main()
+int	main(void)
 {
-	char *nouvelle = "tripouille";
+	char			*nouvelle;
 	unsigned int	index;
-	index = 0;
-	size_t	length;
-	length = 42000;
+	size_t			length;
 
+	nouvelle = "tripouille";
+	index = 0;
+	length = 42000;
 	printf("my function test -> %s\n", ft_substr(nouvelle, index, length));
 	printf("my function test ->%p\n", ft_substr(nouvelle, index, length));
-
 }
 */

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -24,10 +24,11 @@ void	ft_putstr_fd(char *s, int fd)
 	}
 }
 /*
-int	main()
+int	main(void)
 {
-	char *s = "Sumi is tesiting";
-	ft_putstr_fd(s, 1);
+	char	*s;
 
+	s = "Sumi is tesiting";
+	ft_putstr_fd(s, 1);
 }
 */

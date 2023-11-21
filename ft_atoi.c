@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nbtr)
 {
@@ -40,7 +39,7 @@ int	ft_atoi(const char *nbtr)
 	return (sign * nb);
 }
 /*
-int	main()
+int	main(void)
 {
 	char	*str = "590310";
 	printf("original function ->%d\n",atoi(str));

@@ -6,7 +6,7 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 10:44:45 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/21 14:15:06 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/21 17:42:34 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
-	tmp = *lst;
-	while (tmp->next != NULL)
+	if(lst == NULL || del ==NULL || *lst == NULL)
+		return ;
+
+	while (*lst != NULL)
 	{
-		del(tmp);
-		printf("TEST : %s\n", (char *)tmp->content);
-		tmp = tmp->next;
+		tmp = *lst;
+		*lst = (*lst)->next;
+		del(tmp->content);
+		free(tmp);
 	}
-	if (tmp->content != NULL)
-		del(tmp);
 }
 /*
 static void	del_func(void *p)

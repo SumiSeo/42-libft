@@ -36,7 +36,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (array);
 }
-
+/*
 static void	*sumi(void *p)
 {
 	return (p + 1);
@@ -69,3 +69,4 @@ int	main(void)
 		l2 = l2->next;
 	}
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 10:44:52 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/21 14:18:11 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/21 16:55:14 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,14 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	f(&lst);
+	if(lst == NULL || f== NULL)
+		return ;
+	while(lst!=NULL)
+	{
+		f(lst->content);
+		lst = lst->next;
+
+	}
 }
 /*
 static void	sumi(void *p)

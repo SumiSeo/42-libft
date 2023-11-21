@@ -6,7 +6,7 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 10:44:39 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/21 17:29:29 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/21 17:58:45 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list	*temp;
 
 	if (lst == NULL || del == NULL)
 		return ;
 	if (lst)
 	{
-		temp = lst->next;
 		del(lst->content);
 		free(lst);
-		lst = temp;
 	}
 }
 

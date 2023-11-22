@@ -30,7 +30,3 @@ fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all 
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS)  $(BONUS_SOURCE) $(SOURCE)
-	gcc -nostartfiles -shared -o libft.so  $(OBJ) $(BONUS_OBJ)

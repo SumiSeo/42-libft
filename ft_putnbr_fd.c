@@ -22,7 +22,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		nb *= -1;
 	}
-	if (nb < 9)
+	if (nb < 10)
 		ft_putchar_fd(nb + '0', fd);
 	else
 	{

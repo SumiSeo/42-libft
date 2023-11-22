@@ -6,7 +6,7 @@
 /*   By: sumseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:20:29 by sumseo            #+#    #+#             */
-/*   Updated: 2023/11/10 11:20:06 by sumseo           ###   ########.fr       */
+/*   Updated: 2023/11/22 11:37:17 by sumseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,14 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
-	char	*casted_s;
 
-	casted_s = (char *)s;
 	i = 0;
 	while (i < n)
 	{
-		*casted_s = c;
-		casted_s++;
+		*(char *)(s+i) = c;
 		i++;
 	}
-	return (casted_s);
+	return (s);
 }
 
 /*

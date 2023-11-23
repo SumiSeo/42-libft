@@ -51,3 +51,13 @@ Take string as argument and then switch to the integer. Like real numbers, -(neg
   }
 
 ### ft_bzero.c
+
+Take the string until the size of 'n' and change the string to '\0' value. Since we take the string as type of void, we have to cast(indicate the type of data). The code below is different from like my original function, but here the main point is casting string type and access to each string
+
+- while(i < n)
+  {
+  \*(char \*)(s + i) = '\0';
+  i++;
+  }
+
+### ft_caloc.c

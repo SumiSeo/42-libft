@@ -60,4 +60,19 @@ Take the string until the size of 'n' and change the string to '\0' value. Since
   i++;
   }
 
-### ft_caloc.c
+### ft_calloc.c
+
+This function is using malloc function to allocation memories. There are two differences between malloc and calloc. Calloc takes size and it initiate memory '0'value.
+
+- What is size : It is bytes(octet), for int it is 4 and for char it is 1.
+
+- what is count : It is total length of memory allcoation.
+
+But if size is too big allocation would be fail so we have to check several conditions.
+
+1. if(the count != 0 && total_size / count !=size){return NULL}
+2. ptr = malloc(total_size);
+3. if(!ptr){return NULL}
+4. while(i < total\*size){ \*((char \*)(ptr+i) = 0); i++;}
+
+### ft_itoa.c

@@ -108,3 +108,31 @@ This function is oppostive of ft_atoi.c function. It takes integer as an argumen
   dest[--count] = (n_long%10) + '0';
   n_long /=10;
   }
+
+### ft_memchr.c
+
+Return a string if we find the same character, until it's index is less than size n; Here the mainpoint is casting type. To access each string in the void argument, I have to cast the type to char, and then when it re returns the value should be casted again with void.
+
+- First, we have to check whetehr the string is empty or not.
+  If(!s)
+  return NULL;
+  while(i <n)
+  {
+  if(_(unsigned char_)(s+i) == (unsigned char)c)
+  return ((void \*) (s+i));
+  i++;
+  }
+
+### ft_memcmp.c
+
+Return a poistive/negative/0 number regarding on the result between two string comparaison. Let's compare two strings also with type cast.
+
+- This comparaison will happen up until size
+  while(i <n)
+  {
+  if(_(unsigned char_)(s1+i) != _(unsigned char_)(s2+i))
+  return (_(unsigned char_)(s1+i) - _(unsigned char _)(s2+i))
+  i++;
+  }
+- Other wise return (0)
+- Becase if s1 is bigger we should any kind of positive number, but if s1is smaller , we should return any negative number.

@@ -76,3 +76,35 @@ But if size is too big allocation would be fail so we have to check several cond
 4. while(i < total\*size){ \*((char \*)(ptr+i) = 0); i++;}
 
 ### ft_itoa.c
+
+This function is oppostive of ft_atoi.c function. It takes integer as an argument and convert to string.
+
+- To convert number, I have to count how many char will be returned. To do that create static function just for counting length of returned value. Since it is number, have to check with three conditions. And then should return total length.
+  if(n ==0){
+  return 1;
+  }
+  if(n <0)
+  {
+  n \*= -1;
+  total++;
+  }
+  while(n>0)
+  {
+  total++;
+  n = n/ 10;
+  }
+- Now, since we have total number +1 (null terminated value) let's create dynmaic array either calloc or malloc. It allocation fails(if it is empty) just return Null.
+  If (n ==0){
+  dest[0] = '0';
+  }
+  If(n_long <0)
+  {
+  dest[0] = '-';
+  n_long \*= -1;
+  i++;
+  }
+  while(count >i)
+  {
+  dest[--count] = (n_long%10) + '0';
+  n_long /=10;
+  }
